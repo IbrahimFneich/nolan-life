@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nolan Life</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="icon" href="data:,">
+<meta name="description" content="An unofficial scrolling tribute to the work and life of Christopher Nolan, where every chapter bends time the way its film does.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Caveat:wght@500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('fx-on');</script>
+</head>
+<body>
+
+<button class="menu-btn" id="menu-btn" aria-controls="menu" aria-expanded="false" aria-label="Open the chapter index"><i></i><i></i><i></i></button>
+<p class="side-label mono" id="side" aria-hidden="true"></p>
+<div class="hud mono" id="hud" aria-hidden="true"><span id="hud-film">Leader</span><span id="hud-tc">00:00:00:00</span><span id="hud-note">24 fps</span></div>
+<button class="sound-btn mono" id="sound" aria-pressed="false">Sound off</button>
+<dialog class="menu" id="menu" aria-label="Chapters">
+  <form method="dialog"><button class="menu-x" aria-label="Close the chapter index">Close</button></form>
+  <p class="mono menu-k">Work and life of Christopher Nolan</p>
+  <ol class="menu-list" id="menu-list"></ol>
+</dialog>
+
+<main>
+
+<!-- ============ COVER ============ -->
+<header class="scene cover" id="top" data-sound="projector" data-scene="leader" style="--len:380vh">
+  <div class="stage">
+    <p class="cover-meta mono"><span>Work and life of Christopher Nolan</span><span>An unofficial tribute</span></p>
+    <h1 class="cover-word" aria-label="Nolan">
+      <span class="cw cw1" data-fx="x 0vw -78vw .05 .42 in | r 0deg -8deg .05 .42 in">NO-</span>
+      <span class="cw cw2" data-fx="x 0vw 78vw .05 .42 in | r 0deg 8deg .05 .42 in">LAN</span>
+    </h1>
+    <figure class="cover-ph" data-fx="y 70vh 0vh .04 .34 out | s .72 1 .04 .38 out | g 1 1 0 1 | o 1 0 .6 .68">
+      <img src="assets/nolan-2013.jpg" alt="Christopher Nolan at a London premiere in 2013" width="667" height="1000">
+      <figcaption class="mono">London, 2013</figcaption>
+    </figure>
+    <p class="cover-line l1" data-fx="o 0 1 .2 .27 | y 40px 0px .2 .3 out | o 1 0 .52 .58">Born in London on 30 July 1970.</p>
+    <p class="cover-line l2" data-fx="o 0 1 .3 .37 | y 40px 0px .3 .4 out | o 1 0 .52 .58">Thirteen feature films. Every one of them is a clock.</p>
+    <div class="leader" data-fx="o 0 1 .58 .64 | s .6 1 .58 .66 out | s 1 34 .8 .99 in">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="96" class="ld-disk"/>
+        <g data-fx="o 1 0 .79 .83"><circle cx="100" cy="100" r="80" class="ld-ring"/>
+        <circle cx="100" cy="100" r="66" class="ld-ring"/>
+        <path d="M100 0V200M0 100H200" class="ld-cross"/></g>
+      </svg>
+      <span class="ld-sweep" data-fx="o 1 0 .79 .83"></span>
+      <span class="ld-n" data-fx="o 1 0 .8 .84">8</span>
+    </div>
+    <p class="cover-hint mono" data-fx="o 1 0 0 .05">Scroll down. The scroll bar is the projector.</p>
+  </div>
+</header>
+
+<!-- ============ PROLOGUE ============ -->
+<section class="band paper intro" id="intro" data-sound="projector" data-label="Prologue">
+  <div class="wrap">
+    <p class="kicker mono">Prologue</p>
+    <p class="statement" data-words>Christopher Nolan makes films about time. He tells them backwards, folds them inside dreams, bends them around a black hole and runs them in reverse. This page is built the same way. Your scroll is the projector, and the timecode in the corner keeps count.</p>
+    <ul class="facts">
+      <li><b data-total="films" data-roll>13</b><span>feature films, 1998 to 2026</span></li>
+      <li><b data-total="hours" data-roll>30</b><span>hours of running time, back to back</span></li>
+      <li><b data-total="wins" data-roll>18</b><span>Academy Awards won by his films</span></li>
+      <li><b data-total="noms" data-roll>49</b><span>Academy Award nominations</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ LIFE ============ -->
+<section class="band paper life" id="life" data-sound="projector" data-label="Life">
+  <div class="scene tl" style="--len:1150vh">
+    <div class="stage tl-stage">
+      <p class="tl-head mono">Life</p>
+      <article class="ev"><p class="ev-y">1970</p><div class="ev-t"><p>Born on 30 July in Westminster, London. His father, Brendan, is a British advertising executive; his mother, Christina Jensen, an American flight attendant who later teaches English. He grows up between London and Chicago and holds both citizenships.</p></div><figure class="ev-f frame" style="--gw:.42"><span>London<br>Chicago</span></figure></article>
+      <article class="ev"><p class="ev-y">1977</p><div class="ev-t"><p>Aged seven, he borrows his father's Super 8 camera and makes stop-motion films with his toy action figures. Around the same age he sees <em>2001: A Space Odyssey</em> on a big screen in London, and never gets over it.</p></div><figure class="ev-f frame" style="--gw:.3"><span>Super 8</span></figure></article>
+      <article class="ev"><p class="ev-y">1989</p><div class="ev-t"><p><em>Tarantella</em>, a surreal short made with his friend Roko Belic, is shown on <em>Image Union</em>, a public-television showcase for independent film in Chicago.</p></div><figure class="ev-f frame" style="--gw:.36"><span>First short<br>on TV</span></figure></article>
+      <article class="ev"><p class="ev-y">1993</p><div class="ev-t"><p>Graduates in English literature from University College London. With Emma Thomas he runs the college film society, screening 35mm prints during term and spending the takings on 16mm shorts in the summer.</p></div><figure class="ev-f frame" style="--gw:.48"><span>UCL<br>Film Society</span></figure></article>
+      <article class="ev"><p class="ev-y">1997</p><div class="ev-t"><p>Marries Emma Thomas, who will produce his films. Makes <em>Doodlebug</em>, a three-minute short about a man in a flat chasing a tiny version of himself with a shoe.</p></div><figure class="ev-f frame photo" style="--gw:.62"><img src="assets/nolan-thomas.jpg" alt="Christopher Nolan and Emma Thomas at a film festival" width="841" height="624" loading="lazy"><figcaption class="mono">With Emma Thomas. Photo: sbclick, CC BY 1.0</figcaption></figure></article>
+      <article class="ev"><p class="ev-y">1998</p><div class="ev-t"><p><em>Following</em>, his first feature, shot on 16mm black-and-white film over about a year of Saturdays for roughly $6,000.</p></div><figure class="ev-f frame" style="--gw:.4"><span>16 mm<br>B&amp;W</span></figure></article>
+      <article class="ev"><p class="ev-y">2001</p><div class="ev-t"><p><em>Memento</em> becomes a sleeper hit in America. He and Emma Thomas found the production company Syncopy.</p></div><figure class="ev-f frame" style="--gw:.52"><span>35 mm</span></figure></article>
+      <article class="ev"><p class="ev-y">2008</p><div class="ev-t"><p><em>The Dark Knight</em> shoots six sequences, 28 minutes, with IMAX cameras, the first Hollywood feature to do so, and passes $1 billion worldwide.</p></div><figure class="ev-f frame imax" style="--gw:.78"><span>IMAX<br>15/70</span></figure></article>
+      <article class="ev"><p class="ev-y">2010</p><div class="ev-t"><p><em>Inception</em>, an original story he had developed for years, earns eight Academy Award nominations, including Best Picture.</p></div><figure class="ev-f frame photo" style="--gw:.72"><img src="assets/nolan-2010.jpg" alt="Christopher Nolan speaking into a microphone at WonderCon" width="1467" height="1100" loading="lazy"><figcaption class="mono">WonderCon, 2010. Photo: BrokenSphere, CC BY-SA 3.0</figcaption></figure></article>
+      <article class="ev"><p class="ev-y">2017</p><div class="ev-t"><p><em>Dunkirk</em>, about three quarters of it shot with IMAX cameras, brings his first nomination for Best Director.</p></div><figure class="ev-f frame imax" style="--gw:.78"><span>IMAX<br>65 mm</span></figure></article>
+      <article class="ev"><p class="ev-y">2018</p><div class="ev-t"><p>At Cannes he presents an unrestored 70mm print of <em>2001: A Space Odyssey</em> for its 50th anniversary, struck from the original camera negative. The film he saw at seven.</p></div><figure class="ev-f frame photo" style="--gw:.5"><img src="assets/nolan-2018.jpg" alt="Christopher Nolan in a tuxedo at the Cannes Film Festival" width="678" height="960" loading="lazy"><figcaption class="mono">Cannes, 2018. Photo: Georges Biard, CC BY-SA 4.0</figcaption></figure></article>
+      <article class="ev"><p class="ev-y">2019</p><div class="ev-t"><p>Appointed CBE in the Birthday Honours, for services to film.</p></div><figure class="ev-f frame" style="--gw:.38"><span>CBE</span></figure></article>
+      <article class="ev"><p class="ev-y">2023</p><div class="ev-t"><p><em>Oppenheimer</em> is shot partly on black-and-white IMAX film, a stock Kodak made for the first time for this film.</p></div><figure class="ev-f frame imax bw" style="--gw:.8"><span>IMAX<br>B&amp;W</span></figure></article>
+      <article class="ev"><p class="ev-y">2024</p><div class="ev-t"><p>Wins the Academy Award for Best Director and, with Emma Thomas and Charles Roven, Best Picture. Knighted in the New Year Honours; Emma Thomas is made a Dame.</p></div><figure class="ev-f frame photo" style="--gw:.52"><img src="assets/nolan-recent.jpg" alt="Christopher Nolan smiling at a premiere" width="825" height="1100" loading="lazy"><figcaption class="mono">Photo: Philip Romano, CC BY-SA 4.0</figcaption></figure></article>
+      <article class="ev"><p class="ev-y">2025</p><div class="ev-t"><p>Elected the 29th president of the Directors Guild of America on 20 September, unopposed. He has been a member since 2001.</p></div><figure class="ev-f frame" style="--gw:.4"><span>DGA<br>No. 29</span></figure></article>
+      <article class="ev"><p class="ev-y">2026</p><div class="ev-t"><p><em>The Odyssey</em>, the first feature shot entirely with IMAX film cameras, opens on 17 July and passes $1 billion worldwide within three weeks.</p></div><figure class="ev-f frame imax" style="--gw:.86"><span>IMAX<br>100%</span></figure></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ON SET ============ -->
+<section class="band ink onset" id="onset" data-sound="projector" data-label="On set">
+  <div class="wrap">
+    <p class="kicker mono">House rules</p>
+    <h2 class="sect-h" data-words>On a Nolan set</h2>
+    <ol class="rules">
+      <li data-fx="x -40vw 0vw .1 .45 out | r -6deg 0deg .1 .45 out"><b>No chairs.</b><span>Actors and crew have described sets with nowhere to sit, to keep the energy up.</span></li>
+      <li data-fx="x 40vw 0vw .14 .5 out | r 6deg 0deg .14 .5 out"><b>No phones.</b><span>Phones stay off the set. He has said he does not carry a smartphone or use email.</span></li>
+      <li data-fx="x -40vw 0vw .18 .55 out | r -6deg 0deg .18 .55 out"><b>Earl Grey.</b><span>A thermos of tea, all day, in place of coffee.</span></li>
+      <li data-fx="x 40vw 0vw .22 .6 out | r 6deg 0deg .22 .6 out"><b>Film, not digital.</b><span>He shoots on photochemical film, large format where he can, and fights to keep film prints in cinemas.</span></li>
+      <li data-fx="x -40vw 0vw .26 .65 out | r -6deg 0deg .26 .65 out"><b>Real, where possible.</b><span>A truck flipped on a Chicago street, a 747 crashed into a building, a nuclear test rebuilt without computer graphics.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 01 FOLLOWING ============ -->
+<section class="chapter ch-following" id="following" data-sound="footsteps" data-title="Following" data-year="1998" data-min="69" data-budget="$6K" data-gross="$48K" data-oscars="0/0" data-format="16mm B&amp;W">
+  <div class="scene opener" style="--len:230vh">
+    <div class="stage">
+      <p class="op-meta mono"><span>01</span><span>1998</span><span>69 min</span><span>16mm, black and white</span></p>
+      <h2 class="op-title" data-fx="x 100vw -100% 0 .95">Following</h2>
+      <p class="op-tag" data-fx="o 0 1 .3 .4 | o 1 0 .8 .9">A writer follows strangers for material. One of them turns around.</p>
+    </div>
+  </div>
+  <div class="wrap body">
+    <p class="logline">A struggling young writer follows strangers through London to find characters, until a burglar named Cobb notices him and takes him along on his break-ins.</p>
+    <div class="cols">
+      <p>Nolan shot <em>Following</em> on weekends over about a year, with friends who had day jobs, on 16mm black-and-white stock. Every scene was rehearsed until it could be filmed in one or two takes, because the film stock was the budget.</p>
+      <p>The story is cut from three timelines, and the young man's look tells you which one you are in: long hair, then a suit and a short cut, then a bruised face. The burglar is called Cobb; twelve years later Nolan gave the name to Leonardo DiCaprio's thief in <em>Inception</em>. A Batman logo is stuck to the young man's door.</p>
+    </div>
+    <dl class="credits">
+      <div><dt>Written, directed and photographed by</dt><dd>Christopher Nolan</dd></div>
+      <div><dt>Produced by</dt><dd data-people>Emma Thomas, Jeremy Theobald</dd></div>
+      <div><dt>Starring</dt><dd data-people>Jeremy Theobald, Alex Haw, Lucy Russell</dd></div>
+      <div><dt>Music</dt><dd data-people>David Julyan</dd></div>
+      <div><dt>Editing</dt><dd data-people>Gareth Heal</dd></div>
+    </dl>
+  </div>
+  <div class="scene sig strips" style="--len:320vh">
+    <div class="stage">
+      <p class="sig-k mono" data-fx="o 0 1 0 .08">Three timelines, one fall</p>
+      <div class="strip s1" data-fx="x 10vw -70vw 0 1"><span class="strip-l mono">I · Long hair</span></div>
+      <div class="strip s2" data-fx="x -80vw 0vw 0 1"><span class="strip-l mono">II · Suit, short hair</span></div>
+      <div class="strip s3" data-fx="x 0vw -60vw 0 1"><span class="strip-l mono">III · Bruised</span></div>
+      <p class="sig-cap" data-fx="o 0 1 .55 .65 | y 40px 0px .55 .68 out">Nolan intercuts all three from the first minute. You are never told the order; the haircut tells you.</p>
+    </div>
+  </div>
+  <div class="wrap body tail">
+    <blockquote class="q"><p data-words>“Everyone has a box.”</p><cite class="mono">Cobb (Alex Haw)</cite></blockquote>
+    <ul class="stats">
+      <li><b data-roll>69</b><span>minutes, his shortest feature</span></li>
+      <li><b>$<i data-roll>6,000</i></b><span>approximate budget</span></li>
+      <li><b><i data-roll>1</i>–<i data-roll>2</i></b><span>takes per scene, to save film</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 02 MEMENTO ============ -->
+<section class="chapter ch-memento" id="memento" data-sound="reverse" data-title="Memento" data-year="2000" data-min="113" data-budget="$9M" data-gross="$40M" data-oscars="0/2" data-format="35mm">
+  <div class="scene opener" style="--len:230vh">
+    <div class="stage">
+      <p class="op-meta mono"><span>02</span><span>2000</span><span>113 min</span><span>Colour and black and white</span></p>
+      <h2 class="op-title memento-title" data-fx="x -100% 100vw 0 .95" aria-label="Memento"><span>M</span><span>e</span><span>m</span><span>e</span><span>n</span><span>t</span><span>o</span></h2>
+      <p class="op-tag" data-fx="o 0 1 .3 .4 | o 1 0 .8 .9">The ending comes first. This title is running backwards.</p>
+    </div>
+  </div>
+  <div class="wrap body">
+    <p class="logline">Leonard Shelby cannot make new memories. He hunts his wife's killer with Polaroids, handwritten notes and tattoos, and trusts none of the people who help him.</p>
+    <div class="cols">
+      <p>The film runs in two directions at once. The colour scenes play in reverse order, each one ending where the previous one began, so you know as little as Leonard does. The black-and-white scenes run forwards. At the end they meet: a Polaroid develops, and the black and white turns to colour.</p>
+      <p>Based on <em>Memento Mori</em>, a short story by his brother Jonathan Nolan. Shot in 25 days for $9 million, it was nominated for Academy Awards for its screenplay and its editing, and in 2017 the Library of Congress added it to the National Film Registry.</p>
+    </div>
+    <dl class="credits">
+      <div><dt>Screenplay</dt><dd>Christopher Nolan</dd></div>
+      <div><dt>Short story</dt><dd data-people>Jonathan Nolan</dd></div>
+      <div><dt>Associate producer</dt><dd data-people>Emma Thomas</dd></div>
+      <div><dt>Starring</dt><dd data-people>Guy Pearce, Carrie-Anne Moss, Joe Pantoliano</dd></div>
+      <div><dt>Cinematography</dt><dd data-people>Wally Pfister</dd></div>
+      <div><dt>Music</dt><dd data-people>David Julyan</dd></div>
+      <div><dt>Editing</dt><dd data-people>Dody Dorn</dd></div>
+    </dl>
+  </div>
+  <div class="scene sig rewind" style="--len:440vh">
+    <div class="stage">
+      <p class="sig-k mono">Colour runs backwards · Black and white runs forwards</p>
+      <div class="rw-col rw-c" data-fx="y -170% 30% 0 .82">
+        <div class="card c"><span>◀ 8</span><small>he shoots a man</small></div><div class="card c"><span>◀ 7</span><small>a Polaroid fades</small></div><div class="card c"><span>◀ 6</span><small>a note on the back</small></div><div class="card c"><span>◀ 5</span><small>a motel room</small></div><div class="card c"><span>◀ 4</span><small>a tattoo</small></div><div class="card c"><span>◀ 3</span><small>a phone call</small></div><div class="card c"><span>◀ 2</span><small>he wakes</small></div><div class="card c"><span>◀ 1</span><small>who is Natalie?</small></div>
+      </div>
+      <div class="rw-col rw-b" data-fx="y 40% -170% 0 .82">
+        <div class="card b"><span>1 ▶</span><small>a motel room</small></div><div class="card b"><span>2 ▶</span><small>the phone</small></div><div class="card b"><span>3 ▶</span><small>Sammy Jankis</small></div><div class="card b"><span>4 ▶</span><small>the system</small></div><div class="card b"><span>5 ▶</span><small>notes</small></div><div class="card b"><span>6 ▶</span><small>the call</small></div><div class="card b"><span>7 ▶</span><small>a meeting</small></div><div class="card b"><span>8 ▶</span><small>the last one</small></div>
+      </div>
+      <figure class="polaroid" data-fx="s .55 1 .6 .82 io | r -9deg 3deg .6 .82 io">
+        <div class="pol-img" data-fx="g 1 0 .82 .95 | b 1.5 1 .78 .95 | o .55 1 .78 .9"><svg viewBox="0 0 100 100" aria-label="A Polaroid of Teddy, smiling, in front of an empty warehouse"><defs><linearGradient id="pol-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9b77d"/><stop offset="1" stop-color="#c4673f"/></linearGradient></defs><rect width="100" height="100" fill="url(#pol-sky)"/><circle cx="80" cy="22" r="8" fill="#ffe6a8"/><path d="M0 46 h22 v-8 h14 v8 h22 l8 -10 v64 h-66z" fill="#3c4144"/><path d="M4 54 h8 v8 h-8z M18 54 h8 v8 h-8z M32 54 h8 v8 h-8z M46 54 h8 v8 h-8z" fill="#1f2324"/><path d="M0 84 h100 v16 h-100z" fill="#2a2d2e"/><path d="M40 100 q2 -20 16 -24 h14 q14 4 16 24z" fill="#7f9db2"/><path d="M58 76 l5 9 5 -9z" fill="#e2b48f"/><path d="M60 70 h6 v8 h-6z" fill="#d9a882"/><ellipse cx="63" cy="58" rx="12" ry="14" fill="#e2b48f"/><path d="M50 56 q0 -18 14 -17 q13 0 12 16 q-3 -9 -12 -10 q-9 1 -14 11z" fill="#8a6a42"/><circle cx="58" cy="57" r="1.4" fill="#2a1d14"/><circle cx="68" cy="57" r="1.4" fill="#2a1d14"/><path d="M57 64 q6 6 12 0" fill="none" stroke="#7a3a2a" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <figcaption>Don't believe his lies.</figcaption>
+      </figure>
+      <p class="sig-cap rw-cap" data-fx="o 0 1 .86 .92">The last black-and-white scene develops into the first colour one.</p>
+    </div>
+  </div>
+  <div class="wrap body tail">
+    <div class="tattoo" aria-label="Remember Sammy Jankis"><span data-fx="o 0 1 .5 .56">Remember</span> <span data-fx="o 0 1 .38 .44">Sammy</span> <span data-fx="o 0 1 .26 .32">Jankis</span></div>
+    <p class="tat-cap mono">Written on Leonard's hand. Read it the way he lives it, last word first.</p>
+    <ul class="stats">
+      <li><b data-roll>25</b><span>shooting days</span></li>
+      <li><b>$<i data-roll>9</i>M</b><span>budget</span></li>
+      <li><b data-roll>2</b><span>Oscar nominations: screenplay, editing</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 03 INSOMNIA ============ -->
+<section class="chapter ch-insomnia" id="insomnia" data-sound="wind" data-title="Insomnia" data-year="2002" data-min="118" data-budget="$46M" data-gross="$114M" data-oscars="0/0" data-format="35mm">
+  <div class="scene opener" style="--len:230vh">
+    <div class="stage">
+      <p class="op-meta mono"><span>03</span><span>2002</span><span>118 min</span><span>Nightmute, Alaska</span></p>
+      <h2 class="op-title" data-fx="x 100vw -100% 0 .95 | bl 0px 14px .35 .9 | ls 0em .3em .35 .9">Insomnia</h2>
+      <p class="op-tag" data-fx="o 0 1 .3 .4 | o 1 0 .8 .9">In an Alaskan summer, the sun never sets.</p>
+    </div>
+  </div>
+  <div class="wrap body">
+    <p class="logline">Two Los Angeles detectives fly to a small Alaskan town to investigate a murder. Under a sun that never goes down, one of them stops sleeping.</p>
+    <div class="cols">
+      <p>A remake of Erik Skjoldbjærg's 1997 Norwegian thriller. Al Pacino plays Will Dormer, who shoots his own partner in the fog; Robin Williams plays the crime writer who saw it happen; Hilary Swank plays the local detective who idolises Dormer.</p>
+      <p>It is the only Nolan feature he did not write: the screenplay is by Hillary Seitz. His first studio film, it was made with the team from <em>Memento</em>: cinematographer Wally Pfister, editor Dody Dorn, composer David Julyan.</p>
+    </div>
+    <dl class="credits">
+      <div><dt>Screenplay</dt><dd data-people>Hillary Seitz</dd></div>
+      <div><dt>Starring</dt><dd data-people>Al Pacino, Robin Williams, Hilary Swank, Maura Tierney, Martin Donovan</dd></div>
+      <div><dt>Cinematography</dt><dd data-people>Wally Pfister</dd></div>
+      <div><dt>Music</dt><dd data-people>David Julyan</dd></div>
+      <div><dt>Editing</dt><dd data-people>Dody Dorn</dd></div>
+    </dl>
+  </div>
+  <div class="scene sig sun" data-scene="sun" data-rest=".5" style="--len:360vh">
+    <div class="stage">
+      <div class="sun-glare" data-fx="o 0 .92 .2 1 in"></div>
+      <svg class="sun-sky" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <path class="sun-arc" d="M0 470 Q500 330 1000 470"/>
+        <line class="sun-hz" x1="0" y1="480" x2="1000" y2="480"/>
+        <path class="sun-mtn" d="M0 480 L90 420 L170 455 L260 395 L340 450 L430 410 L520 462 L610 400 L700 448 L790 418 L880 458 L1000 425 L1000 560 L0 560Z"/>
+        <circle class="sun-disc" r="26" cx="0" cy="0"/>
+      </svg>
+      <div class="sun-clock"><b id="sun-time">18:00</b><span id="sun-note">Evening</span></div>
+      <p class="sig-cap sun-cap" data-fx="o 0 1 .1 .2 | bl 0px 6px .7 1">Midnight in Nightmute. Still daylight. Hours awake: <b id="sun-awake">36</b>.</p>
+    </div>
+  </div>
+  <div class="wrap body tail">
+    <blockquote class="q"><p data-words>“A good cop can't sleep because he's missing a piece of the puzzle. And a bad cop can't sleep because his conscience won't let him.”</p><cite class="mono">Ellie Burr (Hilary Swank)</cite></blockquote>
+    <ul class="stats">
+      <li><b data-roll>1</b><span>feature he directed but did not write</span></li>
+      <li><b>$<i data-roll>114</i>M</b><span>worldwide gross</span></li>
+      <li><b>$<i data-roll>46</i>M</b><span>budget</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 04 BATMAN BEGINS ============ -->
+<section class="chapter ch-begins" id="begins" data-sound="cave" data-title="Batman Begins" data-year="2005" data-min="140" data-budget="$150M" data-gross="$374M" data-oscars="0/1" data-format="35mm">
+  <div class="scene opener" style="--len:230vh">
+    <div class="stage">
+      <p class="op-meta mono"><span>04</span><span>2005</span><span>140 min</span><span>Gotham, built in a hangar</span></p>
+      <h2 class="op-title" data-fx="x 100vw -100% 0 .95">Batman Begins</h2>
+      <p class="op-tag" data-fx="o 0 1 .3 .4 | o 1 0 .8 .9">To conquer fear, you must become fear.</p>
+    </div>
+  </div>
+  <div class="wrap body">
+    <p class="logline">After years abroad learning to master his fear, Bruce Wayne returns to a city run by criminals and turns that fear against them.</p>
+    <div class="cols">
+      <p>Nolan rebuilt the character from the ground up, asking how a real man could do it. The Tumbler was a working vehicle built from scratch. Gotham's streets were built inside a former airship hangar at Cardington, in Bedfordshire, and the ice training was shot on the Vatnajökull glacier in Iceland.</p>
+      <p>It began his partnership with Hans Zimmer, who scored it with James Newton Howard, and with editor Lee Smith. Michael Caine played Alfred, the first of his eight Nolan films.</p>
+    </div>
+    <dl class="credits">
+      <div><dt>Screenplay</dt><dd data-people>Christopher Nolan, David S. Goyer</dd></div>
+      <div><dt>Produced by</dt><dd data-people>Emma Thomas, Charles Roven, Larry Franco</dd></div>
+      <div><dt>Starring</dt><dd data-people>Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman, Cillian Murphy, Tom Wilkinson, Rutger Hauer, Ken Watanabe, Morgan Freeman</dd></div>
+            <div><dt>Cinematography</dt><dd data-people>Wally Pfister</dd></div>
+      <div><dt>Music</dt><dd data-people>Hans Zimmer, James Newton Howard</dd></div>
+      <div><dt>Editing</dt><dd data-people>Lee Smith</dd></div>
+    </dl>
+  </div>
+  <div class="scene sig bats" data-scene="bats" data-rest=".42" style="--len:340vh">
+    <div class="stage">
+      <canvas class="cv" aria-hidden="true"></canvas>
+      <p class="sig-big" data-fx="o 0 1 .55 .7 | s 1.3 1 .55 .8 out">Fear</p>
+      <p class="sig-cap" data-fx="o 0 1 .7 .8">The swarm in the cave is where Bruce chooses his symbol.</p>
+    </div>
+  </div>
+  <div class="wrap body tail">
+    <blockquote class="q"><p data-words>“Why do we fall, Bruce? So we can learn to pick ourselves up.”</p><cite class="mono">Thomas Wayne (Linus Roache)</cite></blockquote>
+    <ul class="stats">
+      <li><b>$<i data-roll>150</i>M</b><span>budget</span></li>
+      <li><b>$<i data-roll>374</i>M</b><span>worldwide gross</span></li>
+      <li><b data-roll>1</b><span>Oscar nomination, for Wally Pfister's photography</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 05 THE PRESTIGE ============ -->
+<section class="chapter ch-prestige" id="prestige" data-sound="tesla" data-title="The Prestige" data-year="2006" data-min="130" data-budget="$40M" data-gross="$110M" data-oscars="0/2" data-format="35mm">
+  <div class="scene opener" style="--len:230vh">
+    <div class="stage">
+      <p class="op-meta mono"><span>05</span><span>2006</span><span>130 min</span><span>London, Colorado Springs</span></p>
+      <h2 class="op-title" data-fx="x 100vw -100% 0 .95">The Prestige</h2>
+      <p class="op-tag" data-fx="o 0 1 .3 .4 | o 1 0 .8 .9">Are you watching closely?</p>
+    </div>
+  </div>
+  <div class="wrap body">
+    <p class="logline">Two magicians in Victorian London, once partners, destroy their careers, their marriages and each other to perform the better version of one trick.</p>
+    <div class="cols">
+      <p>Christopher and Jonathan Nolan adapted Christopher Priest's 1995 novel and built the film like a magic trick in three acts: the pledge, the turn and the prestige. It hides its secret in plain sight from the first scene.</p>
+      <p>David Bowie plays Nikola Tesla, whose machine in Colorado Springs leaves behind a field of identical top hats. The film was nominated for Academy Awards for its art direction and its photography.</p>
+    </div>
+    <dl class="credits">
+      <div><dt>Screenplay</dt><dd data-people>Christopher Nolan, Jonathan Nolan</dd></div>
+      <div><dt>Novel</dt><dd data-people>Christopher Priest</dd></div>
+      <div><dt>Produced by</dt><dd data-people>Emma Thomas, Aaron Ryder</dd></div>
+      <div><dt>Starring</dt><dd data-people>Hugh Jackman, Christian Bale, Michael Caine, Scarlett Johansson, Rebecca Hall, Andy Serkis, Piper Perabo, David Bowie</dd></div>
+      <div><dt>Cinematography</dt><dd data-people>Wally Pfister</dd></div>
+      <div><dt>Music</dt><dd data-people>David Julyan</dd></div>
+      <div><dt>Editing</dt><dd data-people>Lee Smith</dd></div>
+    </dl>
+  </div>
+  <div class="scene sig trick" data-scene="tesla" data-rest=".2" style="--len:460vh">
+    <div class="stage">
+      <canvas class="cv" aria-hidden="true"></canvas>
+      <ol class="acts mono">
+        <li data-fx="o .25 1 0 .03 | o 1 .25 .33 .36">I · The Pledge</li>
+        <li data-fx="o .25 1 .33 .36 | o 1 .25 .6 .63">II · The Turn</li>
+        <li data-fx="o .25 1 .6 .63">III · The Prestige</li>
+      </ol>
+      <svg class="hat hat-main" viewBox="0 0 100 80" aria-hidden="true" data-fx="s 1 0 .38 .44 in | o 1 0 .41 .44"><use href="#hat"/></svg>
+      <svg class="hat hat-back" viewBox="0 0 100 80" aria-hidden="true" data-fx="o 0 1 .62 .66 | s .4 1 .62 .7 out"><use href="#hat"/></svg>
+      <div class="hatfield" id="hatfield"></div>
+      <div class="flash" data-fx="o 0 1 .4 .415 | o 1 0 .415 .5"></div>
+      <p class="sig-cap trick-c1" data-fx="o 0 1 .05 .1 | o 1 0 .3 .33">The pledge: something ordinary. A top hat.</p>
+      <p class="sig-cap trick-c2" data-fx="o 0 1 .45 .5 | o 1 0 .58 .6">The turn: it disappears.</p>
+      <p class="sig-cap trick-c3" data-fx="o 0 1 .7 .75">The prestige: it comes back. And back. And back.</p>
+    </div>
+  </div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="hat" viewBox="0 0 100 80"><path d="M24 8 Q50 2 76 8 L72 58 Q50 63 28 58Z" fill="currentColor"/><path d="M28 50 Q50 55 72 50 L72 58 Q50 63 28 58Z" fill="var(--band, #8a7240)"/><ellipse cx="50" cy="62" rx="48" ry="11" fill="currentColor"/></symbol></defs></svg>
+  <div class="wrap body tail">
+    <blockquote class="q"><p data-words>“Are you watching closely?”</p><cite class="mono">The film's first line</cite></blockquote>
+    <ul class="stats">
+      <li><b data-roll>3</b><span>acts of a magic trick</span></li>
+      <li><b data-roll>1995</b><span>Christopher Priest's novel</span></li>
+      <li><b data-roll>2</b><span>Oscar nominations: art direction, photography</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 06 THE DARK KNIGHT ============ -->
+<section class="chapter ch-darkknight" id="darkknight" data-sound="tension" data-title="The Dark Knight" data-year="2008" data-min="152" data-budget="$185M" data-gross="$1.006B" data-oscars="2/8" data-format="35mm + IMAX 15/70">
+  <div class="scene opener" style="--len:230vh">
+    <div class="stage">
+      <p class="op-meta mono"><span>06</span><span>2008</span><span>152 min</span><span>35mm and IMAX</span></p>
+      <h2 class="op-title" data-fx="x 100vw -100% 0 .95">The Dark Knight</h2>
+      <p class="op-tag" data-fx="o 0 1 .3 .4 | o 1 0 .8 .9">Why so serious?</p>
+    </div>
+  </div>
+  <div class="scene sig imaxsc" data-scene="skyline" data-rest="1" style="--len:300vh">
+    <div class="stage">
+      <canvas class="cv" aria-hidden="true"></canvas>
+      <div class="bar top" data-fx="y 0% -100% .25 .6 io"></div>
+      <div class="bar bot" data-fx="y 0% 100% .25 .6 io"></div>
+      <p class="ar ar1 mono" data-fx="o 1 0 .25 .32">35mm anamorphic · 2.39 : 1</p>
+      <p class="ar ar2 mono" data-fx="o 0 1 .52 .6">IMAX 15/70 · 1.43 : 1</p>
+      <p class="sig-cap imax-cap" data-fx="o 0 1 .62 .7">The frame opens for the bank heist. 28 minutes of the film were shot with IMAX cameras, a first for a Hollywood feature.</p>
+    </div>
+  </div>
+  <div class="wrap body">
+    <p class="logline">Batman, Lieutenant Gordon and the new district attorney Harvey Dent set out to dismantle Gotham's mob, until the Joker arrives with no plan at all.</p>
+    <div class="cols">
+      <p>Nolan shot six sequences on IMAX film, starting with the opening bank heist. The truck flip on Chicago's LaSalle Street was done for real. Heath Ledger's Joker won a posthumous Academy Award for Best Supporting Actor; the film also won for sound editing, from eight nominations.</p>
+      <p>It became Nolan's first film to pass $1 billion worldwide. When it missed a Best Picture nomination, the Academy expanded the category from five films to ten the following year.</p>
+    </div>
+    <dl class="credits">
+      <div><dt>Screenplay</dt><dd data-people>Jonathan Nolan, Christopher Nolan</dd></div>
+      <div><dt>Story</dt><dd data-people>Christopher Nolan, David S. Goyer</dd></div>
+      <div><dt>Produced by</dt><dd data-people>Emma Thomas, Charles Roven</dd></div>
+      <div><dt>Starring</dt><dd data-people>Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine, Maggie Gyllenhaal, Gary Oldman, Morgan Freeman, Cillian Murphy</dd></div>
+      <div><dt>Cinematography</dt><dd data-people>Wally Pfister</dd></div>
+      <div><dt>Music</dt><dd data-people>Hans Zimmer, James Newton Howard</dd></div>
+      <div><dt>Editing</dt><dd data-people>Lee Smith</dd></div>
+    </dl>
+  </div>
+  <div class="scene sig joker" style="--len:460vh">
+    <div class="stage">
+      <div class="jk-paint" data-fx="o 0 1 .56 .74" aria-hidden="true"></div>
+      <div class="jk-wrap" data-fx="x 70vw 0vw 0 .3 out | y -80vh 0vh 0 .3 out | s .45 1 0 .3 out | s 1 9 .56 .82 in | o 1 0 .7 .8">
+        <div class="jk-card" data-fx="ry 0deg 540deg .02 .36 io | r 150deg -6deg 0 .32 out">
+          <div class="jk-face jk-back"></div>
+          <div class="jk-face jk-front"><svg viewBox="0 0 250 350" aria-label="A Joker playing card"><rect x="4" y="4" width="242" height="342" rx="16" fill="#fbf8f1" stroke="#1b1b1b" stroke-width="2"/><g font-family="Archivo, sans-serif" font-weight="900" font-size="20" fill="#c0201c" text-anchor="middle"><text x="24" y="36">J</text><text x="24" y="56">O</text><text x="24" y="76">K</text><text x="24" y="96">E</text><text x="24" y="116">R</text><g transform="rotate(180 125 175)"><text x="24" y="36">J</text><text x="24" y="56">O</text><text x="24" y="76">K</text><text x="24" y="96">E</text><text x="24" y="116">R</text></g></g><rect x="46" y="30" width="158" height="290" rx="6" fill="none" stroke="#c0201c" stroke-width="1.5"/><path d="M125 112 L84 58 L104 104 L125 46 L146 104 L166 58Z" fill="#5b2a86"/><path d="M104 104 L125 46 L146 104Z" fill="#3c8a3a"/><circle cx="84" cy="56" r="8" fill="#e9c34a"/><circle cx="125" cy="44" r="8" fill="#e9c34a"/><circle cx="166" cy="56" r="8" fill="#e9c34a"/><ellipse cx="125" cy="150" rx="40" ry="46" fill="#f4efe6" stroke="#1b1b1b" stroke-width="2"/><path d="M82 118 Q125 96 168 118 L164 128 Q125 108 86 128Z" fill="#5b2a86"/><path d="M100 140 l9 -9 9 9 -9 9z M132 140 l9 -9 9 9 -9 9z" fill="#1b1b1b"/><path d="M96 162 Q125 196 154 162 Q148 182 125 184 Q102 182 96 162Z" fill="#c0201c"/><path d="M92 158 l6 6 M158 158 l-6 6" stroke="#c0201c" stroke-width="3" stroke-linecap="round"/><path d="M74 204 l12 14 12 -14 12 14 13 -14 13 14 12 -14 12 14 12 -14 V230 H74Z" fill="#3c8a3a"/><path d="M84 230 h82 l16 70 h-114z" fill="#5b2a86"/><path d="M125 230 v70" stroke="#3c8a3a" stroke-width="10"/></svg></div>
+        </div>
+      </div>
+      <svg class="jk-smile" viewBox="0 0 1000 420" aria-hidden="true" data-fx="o 0 1 .655 .67"><path pathLength="1" data-fx="dash 1 0 .66 .84 io" d="M90 110 C150 170 190 250 320 300 S650 330 800 250 S890 150 915 95"/><path class="jk-smile2" pathLength="1" data-fx="dash 1 0 .7 .86 io" d="M110 128 C170 180 210 262 330 306 S640 330 790 256 S880 160 900 112"/></svg>
+      <p class="sig-k mono jk-k">The calling card</p>
+      <p class="sig-cap jk-cap" data-fx="o 0 1 .3 .38 | o 1 0 .52 .58">His calling card is a playing card. Heath Ledger's Joker won the Academy Award for Best Supporting Actor, given after his death.</p>
+      <p class="jk-why" data-fx="o 0 1 .84 .9 | s 1.5 1 .84 .93 out">Why so serious?</p>
+    </div>
+  </div>
+  <div class="scene sig coinsc" style="--len:380vh">
+    <div class="stage">
+      <div class="coin" data-fx="ry 0deg 1980deg .05 .8 io | s .8 1.15 .05 .45 out | s 1.15 1 .45 .8">
+        <div class="face heads"><span>Heads</span></div>
+        <div class="face scarred"><span>Heads</span></div>
+      </div>
+      <p class="coin-q" data-fx="o 0 1 .55 .65">You either die a hero, or you live long enough to see yourself become the villain.</p>
+      <p class="coin-c mono" data-fx="o 0 1 .7 .78">Harvey Dent's coin has two heads. Then one of them is burned.</p>
+    </div>
+  </div>
+  <div class="wrap body tail">
+    <ul class="stats">
+      <li><b data-roll>28</b><span>minutes shot with IMAX cameras</span></li>
+      <li><b>$<i data-roll>1.006</i>B</b><span>worldwide gross</span></li>
+      <li><b data-roll>2</b><span>Oscars, from 8 nominations</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 07 INCEPTION ============ -->
+<section class="chapter ch-inception" id="inception" data-sound="braam" data-title="Inception" data-year="2010" data-min="148" data-budget="$160M" data-gross="$837M" data-oscars="4/8" data-format="35mm + 65mm">
+  <div class="scene opener" style="--len:230vh">
+    <div class="stage op-3d">
+      <p class="op-meta mono"><span>07</span><span>2010</span><span>148 min</span><span>Four levels deep</span></p>
+      <h2 class="op-title" data-fx="x 100vw -100% 0 .95 | rx 0deg 70deg .45 .95 in">Inception</h2>
+      <p class="op-tag" data-fx="o 0 1 .3 .4 | o 1 0 .8 .9">An idea is the most resilient parasite.</p>
+    </div>
+  </div>
+  <div class="wrap body">
+    <p class="logline">A thief who steals secrets from people's dreams is offered his way home in exchange for the opposite job: planting an idea.</p>
+    <div class="cols">
+      <p>Each dream level runs about twenty times slower than the one above it. Ten hours on a flight from Sydney to Los Angeles become a week, then six months, then ten years. The rotating hallway fight was shot for real, in a corridor built to turn like a wheel.</p>
+      <p>Hans Zimmer built the score's brass from a slowed-down Édith Piaf song, <em>Non, je ne regrette rien</em>, the same song the team plays to signal the kick. The film won four Academy Awards: cinematography, visual effects, sound mixing and sound editing.</p>
+    </div>
+    <dl class="credits">
+      <div><dt>Written by</dt><dd>Christopher Nolan</dd></div>
+      <div><dt>Produced by</dt><dd data-people>Emma Thomas</dd></div>
+      <div><dt>Starring</dt><dd data-people>Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy, Ken Watanabe, Dileep Rao, Cillian Murphy, Tom Berenger, Marion Cotillard, Michael Caine</dd></div>
+      <div><dt>Cinematography</dt><dd data-people>Wally Pfister</dd></div>
+      <div><dt>Music</dt><dd data-people>Hans Zimmer</dd></div>
+      <div><dt>Editing</dt><dd data-people>Lee Smith</dd></div>
+    </dl>
+  </div>
+  <div class="scene sig fold" data-scene="fold" data-rest=".5" style="--len:420vh">
+    <div class="stage">
+      <div class="fold-world">
+        <div class="fold-near"><div class="fold-far" data-fx="rx 0deg -90deg .08 .4 io"><div class="fold-top" data-fx="rx 0deg -62deg .36 .72 io"></div></div></div>
+      </div>
+      <p class="sig-k mono fold-k">Paris, folded</p>
+      <p class="sig-cap fold-cap" data-fx="o 0 1 .55 .65">Ariadne bends the street up and over their heads. In a dream, the city is just a surface.</p>
+    </div>
+  </div>
+  <div class="scene sig levels" data-scene="levels" data-rest="0" style="--len:560vh">
+    <div class="stage">
+      <div class="lv-root" id="lv-root">
+        <div class="lv" data-k="0"><p class="lv-l mono">Reality · a flight, Sydney to Los Angeles</p><b class="lv-t" data-clock="0">0 h</b>
+          <div class="lv" data-k="1"><p class="lv-l mono">Level 1 · Yusuf's dream · rain, a van</p><b class="lv-t" data-clock="1">0 h</b>
+            <div class="lv" data-k="2"><p class="lv-l mono">Level 2 · Arthur's dream · a hotel</p><b class="lv-t" data-clock="2">0 h</b>
+              <div class="lv" data-k="3"><p class="lv-l mono">Level 3 · Eames's dream · a mountain fortress</p><b class="lv-t" data-clock="3">0 h</b>
+                <div class="lv" data-k="4"><p class="lv-l mono">Limbo · unconstructed dream space</p><b class="lv-t">∞</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="lv-note mono" id="lv-note">Scroll to go under. Each level runs twenty times slower.</p>
+    </div>
+  </div>
+  <div class="scene sig topsc" data-scene="top" data-rest=".3" style="--len:300vh">
+    <div class="stage">
+      <div class="top-wrap"><svg class="top" viewBox="0 0 120 160" aria-hidden="true"><defs><linearGradient id="topg" x1="0" x2="1"><stop offset="0" stop-color="#3a3f44"/><stop offset=".45" stop-color="#c9ced2"/><stop offset=".6" stop-color="#8a9196"/><stop offset="1" stop-color="#2a2e32"/></linearGradient></defs><rect x="55" y="4" width="10" height="40" rx="3" fill="url(#topg)"/><path d="M8 62 Q60 30 112 62 Q100 110 60 152 Q20 110 8 62Z" fill="url(#topg)"/><ellipse cx="60" cy="62" rx="52" ry="12" fill="#e5e8ea" opacity=".35"/><g class="top-lines" stroke="#1b1e21" stroke-width="1.4" opacity=".5"><path d="M30 60 Q45 110 60 150"/><path d="M60 50 V150"/><path d="M90 60 Q75 110 60 150"/></g></svg><span class="top-shadow"></span></div>
+      <p class="top-q" data-fx="o 0 1 .1 .2 | o 1 0 .88 .9">“You mustn't be afraid to dream a little bigger, darling.”<cite class="mono">Eames (Tom Hardy)</cite></p>
+      <p class="sig-cap top-c" data-fx="o 0 1 .5 .6 | o 1 0 .88 .9">The totem keeps spinning. Does it wobble?</p>
+      <div class="cut" data-fx="o 0 1 .9 .901"><p class="mono">Cut to black.</p></div>
+    </div>
+  </div>
+  <div class="wrap body tail">
+    <ul class="stats">
+      <li><b data-roll>4</b><span>Oscars, from 8 nominations</span></li>
+      <li><b>×<i data-roll>20</i></b><span>slower, each level down</span></li>
+      <li><b>$<i data-roll>837</i>M</b><span>worldwide gross, original release</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 08 THE DARK KNIGHT RISES ============ -->
+<section class="chapter ch-rises" id="rises" data-sound="chant" data-title="The Dark Knight Rises" data-year="2012" data-min="164" data-budget="$250M" data-gross="$1.081B" data-oscars="0/0" data-format="35mm + IMAX 15/70">
+  <div class="scene opener" style="--len:230vh">
+    <div class="stage">
+      <p class="op-meta mono"><span>08</span><span>2012</span><span>164 min</span><span>More than an hour in IMAX</span></p>
+      <h2 class="op-title" data-fx="y 60vh -60vh 0 .95 | x 100vw -100% 0 .95">The Dark Knight Rises</h2>
+      <p class="op-tag" data-fx="o 0 1 .3 .4 | o 1 0 .8 .9">The legend ends.</p>
+    </div>
+  </div>
+  <div class="wrap body">
+    <p class="logline">Eight years after the Joker, a broken Bruce Wayne comes back to face Bane, who cuts Gotham off from the world and holds it hostage.</p>
+    <div class="cols">
+      <p>Nolan edited more than an hour of IMAX footage into the film. The opening hijacking of a plane in mid-air was shot with real aircraft over Scotland, and the stadium sequence was filmed at Pittsburgh's Heinz Field with thousands of extras.</p>
+      <p>Thrown into a prison at the bottom of a well, Bruce climbs out the only way anyone has: without the rope, with the other prisoners chanting. It closed the trilogy at $1.08 billion worldwide.</p>
+    </div>
+    <dl class="credits">
+      <div><dt>Screenplay</dt><dd data-people>Jonathan Nolan, Christopher Nolan</dd></div>
+      <div><dt>Story</dt><dd data-people>Christopher Nolan, David S. Goyer</dd></div>
+      <div><dt>Produced by</dt><dd data-people>Emma Thomas, Charles Roven</dd></div>
+      <div><dt>Starring</dt><dd data-people>Christian Bale, Michael Caine, Gary Oldman, Anne Hathaway, Tom Hardy, Marion Cotillard, Joseph Gordon-Levitt, Morgan Freeman, Cillian Murphy</dd></div>
+      <div><dt>Cinematography</dt><dd data-people>Wally Pfister</dd></div>
+      <div><dt>Music</dt><dd data-people>Hans Zimmer</dd></div>
+      <div><dt>Editing</dt><dd data-people>Lee Smith</dd></div>
+    </dl>
+  </div>
+  <div class="scene sig bane" data-scene="stadium" data-rest=".64" style="--len:600vh">
+    <div class="stage">
+      <canvas class="cv" aria-hidden="true"></canvas>
+      <div class="bn-mask" data-fx="s 2.6 1 0 .26 out | o 1 0 .3 .37 | y 0vh -8vh .26 .37" aria-hidden="true"><svg viewBox="0 0 400 320"><defs><linearGradient id="bn-steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a8a8e"/><stop offset=".5" stop-color="#4a4a4e"/><stop offset="1" stop-color="#232326"/></linearGradient></defs><ellipse cx="200" cy="120" rx="128" ry="150" fill="#141416"/><ellipse cx="200" cy="40" rx="96" ry="40" fill="#1d1d20"/><circle class="bn-eye" cx="158" cy="122" r="5" fill="#d9dde3"/><circle class="bn-eye" cx="242" cy="122" r="5" fill="#d9dde3"/><path d="M78 168 Q200 128 322 168 L306 236 Q200 280 94 236Z" fill="url(#bn-steel)" stroke="#0c0c0e" stroke-width="3"/><path d="M60 170 L18 150 M340 170 L382 150 M70 210 L24 216 M330 210 L376 216" stroke="#2a2a2e" stroke-width="12" stroke-linecap="round"/><rect x="164" y="166" width="72" height="84" rx="10" fill="#0e0e10" stroke="#9a9aa0" stroke-width="3"/><g class="bn-vent" stroke="#b9bcc2" stroke-width="5"><path d="M176 174 V242 M190 174 V242 M204 174 V242 M218 174 V242 M230 176 V240"/></g><path d="M120 184 C100 210 120 236 156 236 M280 184 C300 210 280 236 244 236" fill="none" stroke="#7c7c82" stroke-width="12" stroke-linecap="round"/><path d="M118 176 C140 160 156 186 164 196 M282 176 C260 160 244 186 236 196" fill="none" stroke="#5a5a60" stroke-width="9" stroke-linecap="round"/><circle cx="118" cy="182" r="10" fill="#9a9aa0"/><circle cx="282" cy="182" r="10" fill="#9a9aa0"/></svg></div>
+      <p class="bn-q" data-fx="o 0 1 .05 .11 | o 1 0 .27 .33">“You merely adopted the dark. I was born in it, moulded by it.”</p>
+      <p class="sig-k mono">Bane</p>
+      <p class="sig-cap bn-cap" data-fx="o 0 1 .48 .54 | o 1 0 .9 .95">At a Gotham Rogues game, Bane's bombs bring the field down behind the kick returner. Shot at Pittsburgh's Heinz Field, with thousands of extras.</p>
+      <p class="bn-end" data-fx="o 0 1 .93 .98">Gotham is cut off.</p>
+    </div>
+  </div>
+  <div class="scene sig pit" style="--len:420vh">
+    <div class="stage">
+      <div class="pit-walls" data-fx="s 1 2.6 0 .8 in"></div>
+      <div class="pit-sky" data-fx="s .14 1 0 .78 in | s 1 18 .82 1 in"></div>
+      <svg class="pit-ring" viewBox="0 0 400 400" aria-hidden="true" data-fx="r 0deg 220deg 0 1 | s .7 2.2 0 .85 in | o 1 0 .8 .86"><defs><path id="ringp" d="M200 200 m-160 0 a160 160 0 1 1 320 0 a160 160 0 1 1 -320 0"/></defs><text><textPath href="#ringp">DESHI BASARA · DESHI BASARA · DESHI BASARA · DESHI BASARA · DESHI BASARA ·</textPath></text></svg>
+      <p class="pit-k mono" data-fx="o 1 0 .6 .7">You are at the bottom of the pit. Keep scrolling to climb.</p>
+      <p class="pit-rise" data-fx="o 0 1 .86 .92 | s .6 1 .86 .98 out">Rise.</p>
+    </div>
+  </div>
+  <div class="wrap body tail">
+    <p class="aside">Deshi basara: the prisoners' chant as Bruce makes the jump, usually translated as “rise”.</p>
+    <ul class="stats">
+      <li><b>$<i data-roll>1.081</i>B</b><span>worldwide gross</span></li>
+      <li><b data-roll>60</b><span>plus minutes of IMAX footage</span></li>
+      <li><b data-roll>3</b><span>films, one trilogy, one Bruce Wayne</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 09 INTERSTELLAR ============ -->
+<section class="chapter ch-interstellar" id="interstellar" data-sound="organ" data-title="Interstellar" data-year="2014" data-min="169" data-budget="$165M" data-gross="$677M" data-oscars="1/5" data-format="35mm + IMAX 15/70">
+  <div class="scene opener" style="--len:260vh">
+    <div class="stage">
+      <p class="op-meta mono"><span>09</span><span>2014</span><span>169 min</span><span>Gravity bends time</span></p>
+      <h2 class="op-title stretch" data-fx="x 100vw -100% 0 .95 | wd 62 125 .1 .9 io | wg 200 900 .1 .9">Interstellar</h2>
+      <p class="op-tag" data-fx="o 0 1 .3 .4 | o 1 0 .8 .9">Mankind was born on Earth. It was never meant to die here.</p>
+    </div>
+  </div>
+  <div class="wrap body">
+    <p class="logline">As blight kills Earth's crops, a former NASA pilot leaves his children to search for a new home for humanity, through a wormhole near Saturn.</p>
+    <div class="cols">
+      <p>Physicist Kip Thorne, who later shared the Nobel Prize, was scientific adviser and executive producer. The visual effects company Double Negative rendered the black hole Gargantua from his equations, and the work produced peer-reviewed papers on gravitational lensing. For clarity, the film's version leaves out the Doppler shift that would make one side of the disc far brighter.</p>
+      <p>Nolan grew 500 acres of corn for the farm scenes. Hans Zimmer recorded the score on the organ of the Temple Church in London. The film won the Academy Award for visual effects.</p>
+    </div>
+    <dl class="credits">
+      <div><dt>Written by</dt><dd data-people>Jonathan Nolan, Christopher Nolan</dd></div>
+      <div><dt>Produced by</dt><dd data-people>Emma Thomas, Lynda Obst</dd></div>
+      <div><dt>Starring</dt><dd data-people>Matthew McConaughey, Anne Hathaway, Jessica Chastain, Mackenzie Foy, Ellen Burstyn, Michael Caine, Matt Damon, Casey Affleck, Wes Bentley, David Gyasi, Bill Irwin, John Lithgow</dd></div>
+      <div><dt>Cinematography</dt><dd data-people>Hoyte van Hoytema</dd></div>
+      <div><dt>Music</dt><dd data-people>Hans Zimmer</dd></div>
+      <div><dt>Editing</dt><dd data-people>Lee Smith</dd></div>
+    </dl>
+  </div>
+  <div class="scene sig gargantua" data-scene="gargantua" data-rest=".35" style="--len:520vh">
+    <div class="stage">
+      <canvas class="cv" aria-hidden="true"></canvas>
+      <p class="sig-k mono garg-k" data-fx="o 0 1 0 .06 | o 1 0 .45 .5">Gargantua · rendered live in your browser from the light-bending equations</p>
+      <div class="dilation" data-fx="o 0 1 .48 .54 | o 1 0 .84 .88">
+        <div><span class="mono">Miller's planet</span><b id="dl-planet">0:00:00</b></div>
+        <div><span class="mono">Earth</span><b id="dl-earth">0 years</b></div>
+        <p>One hour on the planet costs seven years at home.</p>
+      </div>
+      <p class="sig-cap garg-cap" data-fx="o 0 1 .88 .92">Past the horizon, there is no picture left. Only the fifth dimension.</p>
+    </div>
+  </div>
+  <div class="scene sig tesseract" data-scene="tesseract" data-rest=".5" style="--len:360vh">
+    <div class="stage">
+      <canvas class="cv" aria-hidden="true"></canvas>
+      <div class="morse" aria-label="STAY in Morse code">
+        <span class="mz"><i class="d"></i><i class="d"></i><i class="d"></i><b>S</b></span>
+        <span class="mz"><i class="l"></i><b>T</b></span>
+        <span class="mz"><i class="d"></i><i class="l"></i><b>A</b></span>
+        <span class="mz"><i class="l"></i><i class="d"></i><i class="l"></i><i class="l"></i><b>Y</b></span>
+      </div>
+      <p class="sig-cap tess-cap" data-fx="o 0 1 .55 .65">Behind the bookshelf, Cooper pushes books off the shelf to spell STAY in Morse code, then sends the data through the second hand of a watch.</p>
+    </div>
+  </div>
+  <div class="wrap body tail">
+    <blockquote class="q"><p data-words>“Do not go gentle into that good night.”</p><cite class="mono">Dylan Thomas, read by Professor Brand (Michael Caine)</cite></blockquote>
+    <ul class="stats">
+      <li><b data-roll>500</b><span>acres of corn, planted for real</span></li>
+      <li><b data-roll>7</b><span>years on Earth for each hour on Miller's planet</span></li>
+      <li><b data-roll>1</b><span>Oscar, for visual effects, from 5 nominations</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 10 DUNKIRK ============ -->
+<section class="chapter ch-dunkirk" id="dunkirk" data-sound="shepard" data-title="Dunkirk" data-year="2017" data-min="106" data-budget="$100M" data-gross="$527M" data-oscars="3/8" data-format="IMAX 65mm + 65mm">
+  <div class="scene opener" style="--len:230vh">
+    <div class="stage">
+      <p class="op-meta mono"><span>10</span><span>2017</span><span>106 min</span><span>Land, sea, air</span></p>
+      <h2 class="op-title dk-title" aria-label="Dunkirk">
+        <span class="dk-b dk-b1" data-fx="x 34vw -34vw 0 1" aria-hidden="true">Dunkirk</span>
+        <span class="dk-b dk-b2" data-fx="x 80vw -80vw 0 1" aria-hidden="true">Dunkirk</span>
+        <span class="dk-b dk-b3" data-fx="x 150vw -150vw 0 1" aria-hidden="true">Dunkirk</span>
+        <i class="dk-bl mono dk-bl1" aria-hidden="true">Air · 1 hour</i><i class="dk-bl mono dk-bl2" aria-hidden="true">Sea · 1 day</i><i class="dk-bl mono dk-bl3" aria-hidden="true">Mole · 1 week</i>
+      </h2>
+      <p class="op-tag" data-fx="o 0 1 .3 .4 | o 1 0 .8 .9">When 400,000 men couldn't get home, home came for them.</p>
+    </div>
+  </div>
+  <div class="wrap body">
+    <p class="logline">May 1940. Allied soldiers are trapped on the beach at Dunkirk with the enemy closing in. The story is told from the land, the sea and the air.</p>
+    <div class="cols">
+      <p>Three timelines of three different lengths are cut together so that they converge at the end: The Mole, one week; The Sea, one day; The Air, one hour. Shot on the real beach at Dunkirk with real ships and Spitfires, about three quarters of it on IMAX cameras. At 106 minutes it was his shortest film since <em>Following</em>.</p>
+      <p>Hans Zimmer built the score on a Shepard tone, the illusion of a pitch that rises forever, and on the ticking of Nolan's own pocket watch. Eight Academy Award nominations, his first for Best Director; three wins, for editing, sound editing and sound mixing.</p>
+    </div>
+    <dl class="credits">
+      <div><dt>Written by</dt><dd>Christopher Nolan</dd></div>
+      <div><dt>Produced by</dt><dd data-people>Emma Thomas</dd></div>
+      <div><dt>Starring</dt><dd data-people>Fionn Whitehead, Tom Glynn-Carney, Jack Lowden, Harry Styles, Aneurin Barnard, James D'Arcy, Barry Keoghan, Kenneth Branagh, Cillian Murphy, Mark Rylance, Tom Hardy, Michael Caine (voice)</dd></div>
+      <div><dt>Cinematography</dt><dd data-people>Hoyte van Hoytema</dd></div>
+      <div><dt>Music</dt><dd data-people>Hans Zimmer</dd></div>
+      <div><dt>Editing</dt><dd data-people>Lee Smith</dd></div>
+    </dl>
+  </div>
+  <div class="scene sig crossing" data-scene="crossing" data-rest=".84" style="--len:900vh">
+    <div class="stage">
+      <canvas class="dk-cv" aria-hidden="true"></canvas>
+      <p class="sig-k mono">One crossing, three clocks. Scroll is the camera.</p>
+      <ul class="dk-clocks mono" aria-hidden="true">
+        <li><b>The Mole</b><i class="dk-bar"><i></i></i><span data-t="mole">Day 1 of 7</span></li>
+        <li><b>The Sea</b><i class="dk-bar"><i></i></i><span data-t="sea">Hour 0 of 24</span></li>
+        <li><b>The Air</b><i class="dk-bar"><i></i></i><span data-t="air">Minute 0 of 60</span></li>
+      </ul>
+      <p class="dk-ph" data-fx="o 1 1 0 .01 | o 1 0 .13 .16 | y 0px -40px .13 .16"><b>The Air</b><span class="mono">One hour</span></p>
+      <p class="dk-ph" data-fx="o 0 1 .33 .36 | o 1 0 .5 .53 | y 40px 0px .33 .36"><b>The Sea</b><span class="mono">One day</span></p>
+      <p class="dk-ph" data-fx="o 0 1 .63 .66 | o 1 0 .76 .79 | y 40px 0px .63 .66"><b>The Mole</b><span class="mono">One week</span></p>
+      <p class="dk-ph dk-meet" data-fx="o 0 1 .94 .97 | y 40px 0px .94 .97"><b>They meet.</b></p>
+      <p class="dk-n mono" data-fx="o 0 1 .36 .39 | o 1 0 .6 .63"><b id="dk-n">0</b> little ships</p>
+      <p class="sig-cap dk-cap" data-fx="o 0 1 .02 .04 | o 1 0 .14 .16">Three Spitfires cross the Channel to cover the beach. Their leader is shot down.</p>
+      <p class="sig-cap dk-cap" data-fx="o 0 1 .17 .19 | o 1 0 .3 .32">Collins is hit. The camera follows him down until he ditches in the sea.</p>
+      <p class="sig-cap dk-cap" data-fx="o 0 1 .36 .39 | o 1 0 .56 .59">Mr Dawson's Moonstone reaches the wreck. Around it, about 850 little ships from England fill the Channel.</p>
+      <p class="sig-cap dk-cap" data-fx="o 0 1 .66 .69 | o 1 0 .77 .8">On the Mole, the queue to go home. A Stuka dives on the ships, siren screaming.</p>
+      <p class="sig-cap dk-cap" data-fx="o 0 1 .8 .83 | o 1 0 .93 .95">Out of fuel, propeller stopped, Farrier glides over the beach, shoots the Stuka down, lands, and sets his Spitfire on fire.</p>
+    </div>
+  </div>
+  <div class="wrap body tail">
+    <blockquote class="q"><p data-words>“You can practically see it from here.” “What?” “Home.”</p><cite class="mono">Commander Bolton (Kenneth Branagh)</cite></blockquote>
+    <ul class="stats">
+      <li><b data-roll>338,226</b><span>soldiers evacuated, 26 May to 4 June 1940</span></li>
+      <li><b data-roll>106</b><span>minutes, his shortest since Following</span></li>
+      <li><b data-roll>3</b><span>Oscars, from 8 nominations</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 11 TENET ============ -->
+<section class="chapter ch-tenet" id="tenet" data-sound="tenet" data-title="Tenet" data-year="2020" data-min="150" data-budget="$200M" data-gross="$365M" data-oscars="1/2" data-format="IMAX 65mm + 65mm" data-tc="rev">
+  <div class="scene opener" style="--len:230vh">
+    <div class="stage">
+      <p class="op-meta mono"><span>11</span><span>2020</span><span>150 min</span><span>Timecode now runs backwards</span></p>
+      <h2 class="op-title tenet-title" data-fx="x -100% 100vw 0 .95" aria-label="Tenet"><span>TEN</span><span class="inv">ET</span></h2>
+      <p class="op-tag" data-fx="o 1 0 .6 .7 | o 0 1 .1 .2">Don't try to understand it. Feel it.</p>
+    </div>
+  </div>
+  <div class="wrap body">
+    <p class="logline">A secret agent with one word, Tenet, is drawn into a war with the future, fought with objects and people that move backwards through time.</p>
+    <div class="cols">
+      <p>Inverted bullets fly back into guns, inverted cars drive in reverse, and some fights run forwards and backwards in the same shot. To film a plane crashing into a building, Nolan bought a real Boeing 747, which he said was cheaper than miniatures and digital effects.</p>
+      <p>It opened in August 2020, the first Hollywood blockbuster released into cinemas during the COVID-19 pandemic. It was his first film with composer Ludwig Göransson and editor Jennifer Lame, and it won the Academy Award for visual effects.</p>
+    </div>
+    <dl class="credits">
+      <div><dt>Written by</dt><dd>Christopher Nolan</dd></div>
+      <div><dt>Produced by</dt><dd data-people>Emma Thomas</dd></div>
+      <div><dt>Starring</dt><dd data-people>John David Washington, Robert Pattinson, Elizabeth Debicki, Dimple Kapadia, Michael Caine, Kenneth Branagh, Aaron Taylor-Johnson, Himesh Patel, Clémence Poésy</dd></div>
+      <div><dt>Cinematography</dt><dd data-people>Hoyte van Hoytema</dd></div>
+      <div><dt>Music</dt><dd data-people>Ludwig Göransson</dd></div>
+      <div><dt>Editing</dt><dd data-people>Jennifer Lame</dd></div>
+    </dl>
+  </div>
+  <div class="scene sig pincer" data-scene="pincer" data-rest=".3" style="--len:620vh">
+    <div class="stage">
+      <div class="pc-door" data-fx="ry 0deg 180deg .45 .55 io | s 1 .78 .45 .5 io | s .78 1 .5 .55 io">
+        <canvas class="pc-cv" aria-hidden="true"></canvas>
+      </div>
+      <i class="pc-axis" aria-hidden="true" data-fx="o 0 1 .44 .49 | o 1 0 .51 .56"></i>
+      <p class="sig-k mono pc-k"><b id="pc-dir">◀ Inverted</b><span id="pc-t">2.40 s</span></p>
+      <p class="pc-line pc-l1" data-fx="o 0 1 .02 .05 | o 1 0 .2 .23 | y -8vh 30vh 0 .23">The glass un-breaks.</p>
+      <p class="pc-line pc-l2" data-fx="o 0 1 .22 .25 | o 1 0 .41 .44 | y -12vh 30vh .2 .44">The bullet flies back into the gun.</p>
+      <p class="pc-turn mono" data-fx="o 0 1 .44 .47 | o 1 0 .53 .56">Through the turnstile</p>
+      <p class="pc-line pc-l3" data-fx="o 0 1 .58 .61 | o 1 0 .8 .83 | y 25vh -30vh .56 .83">Now forwards, and mirrored.</p>
+      <p class="sig-cap pc-cap" data-fx="o 0 1 .84 .87">One shot, played as a palindrome. Blue runs backwards up to the turnstile, red runs forwards after it. Every frame mirrors the one the same distance from the middle.</p>
+    </div>
+  </div>
+  <div class="scene sig sator" style="--len:380vh">
+    <div class="stage">
+      <p class="sig-k mono">The Sator square, Pompeii, first century</p>
+      <div class="sq" id="sq" aria-label="SATOR AREPO TENET OPERA ROTAS"></div>
+      <ol class="sq-key mono">
+        <li data-fx="o .2 1 .62 .66"><b>Sator</b> Andrei Sator, the arms dealer</li>
+        <li data-fx="o .2 1 .66 .7"><b>Arepo</b> the forger of the Goya</li>
+        <li data-fx="o .2 1 .7 .74"><b>Tenet</b> the organisation</li>
+        <li data-fx="o .2 1 .74 .78"><b>Opera</b> the siege at the Kyiv opera house</li>
+        <li data-fx="o .2 1 .78 .82"><b>Rotas</b> the security company at the freeport</li>
+      </ol>
+      <p class="sig-cap sq-cap" data-fx="o 0 1 .2 .28 | o 1 0 .55 .6">Every letter swaps places with its mirror through the centre. The square comes out the same.</p>
+    </div>
+  </div>
+  <div class="wrap body tail">
+    <ul class="stats">
+      <li><b data-roll>747</b><span>a real one, crashed on purpose</span></li>
+      <li><b data-roll>5</b><span>words, read the same in four directions</span></li>
+      <li><b data-roll>1</b><span>Oscar, for visual effects</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 12 OPPENHEIMER ============ -->
+<section class="chapter ch-oppenheimer" id="oppenheimer" data-sound="geiger" data-title="Oppenheimer" data-year="2023" data-min="180" data-budget="$100M" data-gross="$975M" data-oscars="7/13" data-format="IMAX 65mm + 65mm, colour and B&amp;W">
+  <div class="scene opener" style="--len:230vh">
+    <div class="stage">
+      <p class="op-meta mono"><span>12</span><span>2023</span><span>180 min</span><span>Fission · Fusion</span></p>
+      <h2 class="op-title" data-fx="x 100vw -100% 0 .95">Oppenheimer</h2>
+      <p class="op-tag" data-fx="o 0 1 .3 .4 | o 1 0 .8 .9">The world forever changes.</p>
+    </div>
+  </div>
+  <div class="wrap body">
+    <p class="logline">The physicist J. Robert Oppenheimer leads the Manhattan Project to build the atomic bomb, then watches the country he served turn on him.</p>
+    <div class="cols">
+      <p>Adapted from <em>American Prometheus</em>, the Pulitzer Prize-winning biography by Kai Bird and Martin J. Sherwin. Nolan wrote Oppenheimer's scenes in the first person. They play in colour, titled Fission; the black-and-white scenes, titled Fusion, follow Lewis Strauss from the outside. Kodak made black-and-white IMAX film stock for the first time for it.</p>
+      <p>The Trinity test was recreated without computer graphics. Released on 21 July 2023, the same day as <em>Barbie</em>, it took $975 million worldwide and won seven Academy Awards from thirteen nominations: Picture, Director, Actor for Cillian Murphy, Supporting Actor for Robert Downey Jr., cinematography, editing and score.</p>
+    </div>
+    <dl class="credits">
+      <div><dt>Written by</dt><dd>Christopher Nolan</dd></div>
+      <div><dt>Book</dt><dd data-people>Kai Bird, Martin J. Sherwin</dd></div>
+      <div><dt>Produced by</dt><dd data-people>Emma Thomas, Charles Roven</dd></div>
+      <div><dt>Starring</dt><dd data-people>Cillian Murphy, Emily Blunt, Matt Damon, Robert Downey Jr., Florence Pugh, Josh Hartnett, Casey Affleck, Rami Malek, Kenneth Branagh, Benny Safdie, Gary Oldman</dd></div>
+      <div><dt>Cinematography</dt><dd data-people>Hoyte van Hoytema</dd></div>
+      <div><dt>Music</dt><dd data-people>Ludwig Göransson</dd></div>
+      <div><dt>Editing</dt><dd data-people>Jennifer Lame</dd></div>
+      <div><dt>Production design</dt><dd data-people>Ruth De Jong</dd></div>
+    </dl>
+  </div>
+  <div class="scene sig chain" data-scene="chain" data-rest=".55" style="--len:560vh">
+    <div class="stage">
+      <canvas class="cv" aria-hidden="true"></canvas>
+      <p class="chain-k mono" data-fx="o 1 0 .55 .6">Generation <b id="ch-gen">0</b> · <b id="ch-n">1</b> nuclei split</p>
+      <p class="sig-cap chain-c" data-fx="o 0 1 .04 .1 | o 1 0 .5 .55">One neutron splits one nucleus. Two or three come out, and each finds another.</p>
+      <div class="whiteout" data-fx="o 0 1 .6 .615 | o 1 0 .9 1">
+        <p class="wo-t" data-fx="o 0 1 .64 .68">05:29:45<span class="mono">16 July 1945 · Jornada del Muerto, New Mexico</span></p>
+        <p class="wo-s mono" data-fx="o 0 1 .7 .74 | o 1 0 .78 .8">Silence.</p>
+        <p class="wo-b" data-fx="o 0 1 .8 .81 | s 1.6 1 .8 .86 out">Then the sound arrives.</p>
+      </div>
+    </div>
+  </div>
+  <div class="scene sig fission" style="--len:300vh">
+    <div class="stage">
+      <div class="fz fz-c"><p>Fission</p><span class="mono">Colour · Oppenheimer's point of view</span></div>
+      <div class="fz fz-bw" data-fx="clip 0%_0%_0%_100% 0%_0%_0%_0% .15 .85 io"><p>Fusion</p><span class="mono">Black and white · Lewis Strauss, seen from outside</span></div>
+    </div>
+  </div>
+  <div class="wrap body tail">
+    <blockquote class="q"><p data-words>“Now I am become Death, the destroyer of worlds.”</p><cite class="mono">Oppenheimer, quoting the Bhagavad Gita</cite></blockquote>
+    <ul class="stats">
+      <li><b data-roll>7</b><span>Oscars, from 13 nominations</span></li>
+      <li><b>$<i data-roll>975</i>M</b><span>worldwide gross</span></li>
+      <li><b data-roll>180</b><span>minutes, his longest</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 13 THE ODYSSEY ============ -->
+<section class="chapter ch-odyssey" id="odyssey" data-sound="lyre" data-title="The Odyssey" data-year="2026" data-min="172" data-budget="$250M" data-gross="$1B+" data-oscars="0/0" data-format="IMAX 65mm, all of it">
+  <div class="scene opener" style="--len:230vh">
+    <div class="stage">
+      <p class="op-meta mono"><span>13</span><span>2026</span><span>172 min</span><span>Shot entirely on IMAX film</span></p>
+      <h2 class="op-title" data-fx="x 100vw -100% 0 .95">The Odyssey</h2>
+      <p class="op-tag" data-fx="o 0 1 .3 .4 | o 1 0 .8 .9">Ten years of war. Ten years home.</p>
+    </div>
+  </div>
+  <div class="wrap body">
+    <p class="logline">After the fall of Troy, Odysseus spends ten years trying to sail home to Ithaca, to his wife Penelope and the son he has never known.</p>
+    <div class="cols">
+      <p>Nolan's adaptation of Homer is the first feature shot entirely with IMAX film cameras. Ludwig Göransson's score leaves out the orchestra, which did not exist in Homer's world, in favour of ancient instruments such as the aulos and the lyre.</p>
+      <p>Released by Universal on 17 July 2026, it opened to $264 million worldwide, the biggest opening of Nolan's career, and passed $1 billion within three weeks. Bill Irwin, the voice of TARS in <em>Interstellar</em>, is in the cast.</p>
+    </div>
+    <dl class="credits">
+      <div><dt>Written by</dt><dd>Christopher Nolan</dd></div>
+      <div><dt>Poem</dt><dd>Homer</dd></div>
+      <div><dt>Produced by</dt><dd data-people>Emma Thomas</dd></div>
+      <div><dt>Starring</dt><dd data-people>Matt Damon (Odysseus), Tom Holland, Anne Hathaway, Robert Pattinson, Lupita Nyong'o, Zendaya, Charlize Theron, Jon Bernthal, Samantha Morton, Bill Irwin</dd></div>
+      <div><dt>Cinematography</dt><dd data-people>Hoyte van Hoytema</dd></div>
+      <div><dt>Music</dt><dd data-people>Ludwig Göransson</dd></div>
+      <div><dt>Editing</dt><dd data-people>Jennifer Lame</dd></div>
+      <div><dt>Production design</dt><dd data-people>Ruth De Jong</dd></div>
+    </dl>
+  </div>
+  <div class="scene sig voyage" data-scene="voyage" data-rest=".22" style="--len:1400vh">
+    <div class="stage">
+      <canvas class="cv" aria-hidden="true"></canvas>
+      <p class="sig-k mono">The wine-dark sea · Troy to Ithaca, after Homer</p>
+      <div class="vy-year"><b id="vy-year">0</b><span class="mono">years since Troy</span></div>
+      <div class="vy-where"><p class="vy-stop" id="vy-stop">Troy</p><p class="vy-line" id="vy-line"></p></div>
+    </div>
+  </div>
+  <div class="wrap body tail">
+    <blockquote class="q"><p data-words>“Tell me, O muse, of that ingenious hero who travelled far and wide after he had sacked the famous town of Troy.”</p><cite class="mono">Homer, Odyssey, Book I, translated by Samuel Butler</cite></blockquote>
+    <ul class="stats">
+      <li><b>$<i data-roll>264</i>M</b><span>worldwide opening, his biggest</span></li>
+      <li><b>$<i data-roll>1</i>B</b><span>passed within three weeks</span></li>
+      <li><b data-roll>100</b><span>per cent shot on IMAX film</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ COMPANY ============ -->
+<section class="band ink company" id="company" data-sound="projector" data-label="The company">
+  <div class="scene co" data-scene="company" data-rest="1" style="--len:620vh">
+    <div class="stage">
+      <div class="co-head">
+        <div>
+          <p class="kicker mono">Directed by Christopher Nolan, with</p>
+          <h2 class="co-h">The company he keeps</h2>
+        </div>
+        <p class="co-now"><b id="co-year">1998</b><span id="co-film">Following</span><i class="mono"><span id="co-n">0</span> regulars so far</i></p>
+      </div>
+      <p class="co-ghost" id="co-ghost" aria-hidden="true">Following</p>
+      <ol class="crew" id="crew"></ol>
+      <ol class="co-films mono" id="co-films" aria-hidden="true"></ol>
+      <p class="co-note mono">Everyone who worked on two films or more, counted from the credits on this page. Scroll to run the films; each block is one film.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FILMOGRAPHY ============ -->
+<section class="band paper films" id="films" data-sound="projector" data-label="Filmography">
+  <div class="wrap">
+    <p class="kicker mono">Filmography</p>
+    <h2 class="sect-h" data-words>Thirteen films, end to end</h2>
+    <div class="tbl-wrap"><table class="tbl" id="tbl"><thead><tr><th>No.</th><th>Film</th><th>Year</th><th>Minutes</th><th>Format</th><th>Budget</th><th>Worldwide</th><th>Oscars</th></tr></thead><tbody></tbody><tfoot></tfoot></table></div>
+    <p class="note mono">Grosses are worldwide theatrical, original release, rounded. <em>The Odyssey</em> was still in release when this page was made.</p>
+  </div>
+</section>
+
+<!-- ============ CREDITS ============ -->
+<footer class="band ink credits-page" id="credits" data-sound="projector" data-label="Credits">
+  <div class="wrap">
+    <p class="end-word" data-fx="s 1.6 1 0 .5 out | o 0 1 0 .3">The End</p>
+    <div class="end-cols">
+      <div>
+        <p class="kicker mono">About this page</p>
+        <p>An unofficial tribute made by a fan. It is not affiliated with Christopher Nolan, Syncopy, Warner Bros., Universal Pictures or any of the studios. No film stills or posters are used: every scene here is drawn by your browser in code. The structure is a homage to <a href="https://kubrick.life/" target="_blank" rel="noopener">kubrick.life</a>, a scrolling tribute to Stanley Kubrick.</p>
+      </div>
+      <div>
+        <p class="kicker mono">Photographs</p>
+        <p>Via Wikimedia Commons, shown in black and white: Richard Goldschmidt (London, 2013), CC BY 3.0 · sbclick (with Emma Thomas), CC BY 1.0 · BrokenSphere (WonderCon, 2010), CC BY-SA 3.0 · Georges Biard (Cannes, 2018), CC BY-SA 4.0 · Philip Romano, CC BY-SA 4.0.</p>
+      </div>
+      <div>
+        <p class="kicker mono">Sources</p>
+        <p>Wikipedia film and biography entries; Box Office Mojo; Variety and Deadline box-office reports for <em>The Odyssey</em> (July and August 2026); The Hollywood Reporter on the DGA election (September 2025); Academy Awards database; Kip Thorne et al., <em>Classical and Quantum Gravity</em> 32 (2015). Quotes are film dialogue; Homer is in Samuel Butler's public-domain translation.</p>
+      </div>
+    </div>
+    <p class="mono end-k">Total running time of this tribute: however long you scrolled.</p>
+  </div>
+</footer>
+
+</main>
+
+<script src="scenes.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
